@@ -54,7 +54,6 @@ static void	freehostinfo(struct hostinfo *);
 static void	getaddr(u_int32_t *, char *);
 static struct	hostinfo *gethostinfo(const char *);
 static u_short	in_cksum(u_short *, int);
-static int	main(int, char **);
 static u_short p_cksum(struct ip *, u_short *, int);
 static char	*pr_type(u_char);
 #ifdef	IPSEC
