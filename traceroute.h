@@ -151,6 +151,7 @@ double traceroute_time_delta(struct traceroute *);
 int traceroute_send_next_probe(struct traceroute *);
 int traceroute_packet_ok(struct traceroute *t, int);
 char *traceroute_inetname(struct traceroute *t, struct in_addr);
+int traceroute_packet_code(struct traceroute *t, int cc);
 
 #define TRACEROUTE_FOR_EACH_TTL(t) \
 	 for (t->ttl = t->first_ttl; t->ttl <= t->max_ttl; t->ttl++)
