@@ -69,6 +69,10 @@ static char prog[] = "traceroute";
 #include <string.h>
 #include <unistd.h>
 
+#ifdef __APPLE__
+#include <netinet/ip_var.h>
+#endif
+
 /* Maximum number of gateways (include room for one noop) */
 #define NGATEWAYS ((int)((MAX_IPOPTLEN - IPOPT_MINOFF - 1) / sizeof(u_int32_t)))
 
