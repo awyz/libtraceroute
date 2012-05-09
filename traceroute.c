@@ -209,7 +209,7 @@ traceroute_wait_for_reply(struct traceroute *t)
 	struct timeval now, wait;
 	int cc = 0;
 	int error;
-	int fromlen = sizeof(*t->from);
+	socklen_t fromlen = sizeof(*t->from);
 	int sock = t->s;
 	struct sockaddr_in *fromp = t->from;
 	struct timeval *tp = &t->timesent;
